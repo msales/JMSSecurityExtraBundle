@@ -92,6 +92,7 @@ class JMSSecurityExtraExtension extends Extension
 
         if ($config['method_access_control']) {
             $driverDef = $container->getDefinition('security.extra.driver_chain');
+            $driverDef->setPublic(true);
             $args = $driverDef->getArguments();
             array_unshift($args[0], new Reference('security.extra.config_driver'));
             $driverDef->setArguments($args);
