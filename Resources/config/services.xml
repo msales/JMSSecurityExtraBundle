@@ -76,7 +76,7 @@
                 <argument type="service" id="security.extra.annotation_driver" />
             </argument>
         </service>
-        <service id="security.extra.metadata_driver" alias="security.extra.driver_chain"></service>
+        <service id="security.extra.metadata_driver" alias="security.extra.driver_chain" public="true"></service>
         
         <service id="security.extra.lazy_loading_driver" class="%security.extra.lazy_loading_driver.class%" public="false">
             <argument type="service" id="service_container" />
